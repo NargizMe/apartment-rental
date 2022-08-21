@@ -1,0 +1,264 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/slider.css" />
+    <link rel="stylesheet" href="assets/styles/modal.css" />
+    <link rel="stylesheet" href="assets/font-awesome/all.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="overlay-side-bar overlay"
+        onclick="toggleSideBar(false)"
+      ></div>
+      <div class="overlay-subscribe overlay"></div>
+      <div class="side-bar">
+        <button
+          class="close-button close-side-bar"
+          onclick="toggleSideBar(false)"
+        >
+          <i class="fa-solid fa-x"></i>
+        </button>
+        <div class="side-bar__top">
+          <h3>Rental</h3>
+          <h3>from 99$</h3>
+          <h6>per night</h6>
+          <form>
+            <label for="checkIn">
+              <i class="fa-regular fa-calendar-check"></i>
+              Check in
+            </label>
+            <input
+              type="text"
+              id="checkIn"
+              name="checkIn"
+              placeholder="DD MM YY"
+            />
+            <label for="checkOut">
+              <i class="fa-regular fa-calendar"></i>
+              Check out
+            </label>
+            <input
+              type="text"
+              id="checkOut"
+              name="checkOut"
+              placeholder="DD MM YY"
+            />
+            <label for="adult">
+              <i class="fa-solid fa-person"></i>
+              Adults
+            </label>
+            <input type="number" id="adult" name="adult" min="1" value="1" />
+            <label for="kid">
+              <i class="fa-solid fa-child-reaching"></i>
+              Kids
+            </label>
+            <input type="number" id="kid" name="kid" min="0" value="0" />
+            <button class="main-button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Search availability
+            </button>
+          </form>
+        </div>
+        <div class="side-bar__links">
+          <a href="#apartment">
+            <i class="fa-solid fa-building"></i>
+            Apartment
+          </a>
+          <button onclick="toggleSubscribe(true)">
+            <i class="fa-solid fa-rss"></i>
+            Subscribe
+          </button>
+          <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+            Contact
+          </a>
+        </div>
+      </div>
+      <div class="main-page" id="apartment">
+        <nav>
+          <p>Rental</p>
+          <button onclick="toggleSideBar(true)">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </nav>
+        <h1 class="main-page__title">The Apartment</h1>
+        <div class="slider-container">
+          <div class="slider__main-image">
+            <img src="assets/images/livingroom1.jpg" />
+            <div class="image-label">Living Room</div>
+          </div>
+          <div class="slider__small-images">
+            <button
+              type="button"
+              onclick="changeSlider('livingroom1', 'Living Room')"
+            >
+              <img src="assets/images/livingroom1.jpg" style="opacity: 1" />
+            </button>
+            <button type="button" onclick="changeSlider('bedroom', 'Bedroom')">
+              <img src="./assets/images/bedroom.jpg" />
+            </button>
+            <button
+              type="button"
+              onclick="changeSlider('diningroom', 'Dining Room')"
+            >
+              <img src="./assets/images/diningroom.jpg" />
+            </button>
+            <button
+              type="button"
+              onclick="changeSlider('livingroom2', 'Living Room II')"
+            >
+              <img src="./assets/images/livingroom2.jpg" />
+            </button>
+          </div>
+        </div>
+        <div class="the-space list-container">
+          <h2 class="the-space__title list__title">The space</h2>
+          <div class="the-space__list list">
+            <div>
+              <p>
+                <i class="fa-solid fa-person"></i>
+                Max people: 4
+              </p>
+              <p>
+                <i class="fa-solid fa-bath"></i>
+                Bathrooms: 2
+              </p>
+              <p>
+                <i class="fa-solid fa-bed"></i>
+                Bedrooms: 1
+              </p>
+            </div>
+            <div>
+              <p>
+                <i class="fa-solid fa-clock"></i>
+                Check In: After 3PM
+              </p>
+              <p>
+                <i class="fa-solid fa-clock"></i>
+                Check Out: 12PM
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="line-div"></div>
+        <div class="amenities list-container">
+          <h2 class="amenities__title list__title">Amenities</h2>
+          <div class="amenities__list list">
+            <div>
+              <p>
+                <i class="fa-solid fa-shower"></i>
+                Shower
+              </p>
+              <p>
+                <i class="fa-solid fa-wifi"></i>
+                WiFi
+              </p>
+              <p>
+                <i class="fa-solid fa-tv"></i>
+                TV
+              </p>
+            </div>
+            <div>
+              <p>
+                <i class="fa-solid fa-utensils"></i>
+                Kitchen
+              </p>
+              <p>
+                <i class="fa-solid fa-temperature-half"></i>
+                Heating
+              </p>
+              <p>
+                <i class="fa-solid fa-wheelchair"></i>
+                Accessible
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="line-div"></div>
+        <div class="info">
+          <h2 class="info__title">Extra Info</h2>
+          <p class="info__text">
+            Our apartment is really clean and we like to keep it that way. Enjoy
+            the lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            We accept:
+            <i class="fa-regular fa-credit-card"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-amex"></i>
+            <i class="fa-brands fa-cc-paypal"></i>
+          </p>
+        </div>
+        <div class="line-div"></div>
+        <div class="rules">
+          <h2 class="rules__title">Rules</h2>
+          <p class="rules__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Subscribe to receive updates on available dates and special offers.
+          </p>
+          <button
+            class="rules__button main-button"
+            onclick="toggleSubscribe(true)"
+          >
+            Subscribe
+          </button>
+        </div>
+        <div class="line-div"></div>
+        <div class="contact" id="contact">
+          <h2 class="contact__title">Contact</h2>
+          <ul class="contact__list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              Chicago, US
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              Phone: +00 151515
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              Email: mail@mail.com
+            </li>
+          </ul>
+          <p class="contact__subtitle">Questions? Go ahead, ask them:</p>
+          <form>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Message" />
+            <button class="main-button">Send a Message</button>
+          </form>
+        </div>
+        <!--      <p>Powered by Me Me</p>-->
+      </div>
+    </div>
+
+    <div class="subscribe-container">
+      <button class="close-button" onclick="toggleSubscribe(false)">
+        <i class="fa-solid fa-x"></i>
+      </button>
+      <h2>SUBSCRIBE</h2>
+      <p>
+        Join our mailing list to receive updates on available dates and special
+        offers.
+      </p>
+      <input type="email" placeholder="Enter e-mail" />
+      <button class="main-button" onclick="toggleSubscribe(false)">
+        Subscribe
+      </button>
+    </div>
+
+    <script src="./assets/scripts/app.js"></script>
+    <script src="assets/font-awesome/all.min.js"></script>
+  </body>
+</html>

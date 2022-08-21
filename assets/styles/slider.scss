@@ -1,0 +1,31 @@
+.slider-container {
+  .slider__main-image {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .image-label {
+      position: absolute;
+      color: white;
+      bottom: 13px;
+      left: 0;
+      background-color: black;
+      padding: 19px 15px;
+    }
+  }
+  .slider__small-images {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(160px, 1fr));
+    grid-gap: 13px;
+    margin: 13px 0;
+    button {
+      border: none;
+      padding: 0;
+      background-color: transparent;
+      img {
+        opacity: 0.5;
+        width: 100%;
+      }
+    }
+  }
+}

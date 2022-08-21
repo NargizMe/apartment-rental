@@ -1,0 +1,250 @@
+* {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.main-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 13px;
+  font-size: 15px;
+  font-weight: normal;
+  width: 230px;
+}
+
+.close-button {
+  position: absolute;
+  top: 33px;
+  right: 13px;
+  border: none;
+  background-color: transparent;
+  width: 25px;
+  padding: 0;
+
+  svg {
+    font-size: 20px;
+  }
+}
+
+.container {
+  display: flex;
+  //position: relative;
+  justify-content: center;
+  //grid-template-columns: 50% 50%;
+  //grid-gap: 0;
+  //max-width: 1301px;
+
+  .overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .overlay-side-bar {
+    z-index: 2;
+  }
+  .overlay-subscribe {
+    z-index: 4;
+  }
+}
+
+.side-bar {
+  border-left: 1px solid lightgray;
+  background-color: #f1f1f1;
+  position: sticky;
+  height: 100vh;
+  transition: all 0.5s ease;
+  //left: 330px;
+
+  .close-side-bar {
+    opacity: 0;
+  }
+
+  .side-bar__top {
+    padding: 20px;
+    h3 {
+      font-size: 24px;
+      font-weight: normal;
+      margin: 10px 0;
+    }
+    h6 {
+      font-size: 16px;
+      font-weight: normal;
+      margin: 10px 0;
+    }
+    form {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: 14px;
+      margin: 50px 0 25px 0;
+      input {
+        border: 1px solid #ccc;
+        padding: 8px;
+        height: 40px;
+        font-size: 15px;
+      }
+    }
+  }
+  .side-bar__links {
+    display: grid;
+    grid-template-columns: 100%;
+    //grid-gap: 33px;
+    a,
+    a:hover,
+    a:focus,
+    a:active,
+    button {
+      padding: 18px;
+      text-decoration: none;
+      color: inherit;
+    }
+    a:hover,
+    button:hover {
+      background-color: rgba(134, 136, 136, 0.18);
+    }
+    button {
+      border: none;
+      background-color: transparent;
+      text-align: start;
+      font-size: 16px;
+    }
+    svg {
+      width: 20px;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transform: translateX(-270px);
+
+    .close-side-bar {
+      opacity: 1;
+    }
+  }
+}
+
+.main-page {
+  width: 100%;
+  max-width: 718px;
+  //margin: 0 auto;
+  padding: 0 20px;
+  border-right: 1px solid lightgray;
+  //margin-left: 270px;
+
+  nav {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 20px;
+    color: white;
+    height: 55px;
+    font-size: 25px;
+    margin-bottom: 50px;
+    p {
+      margin: 0;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      svg {
+        color: white;
+        font-size: 23px;
+      }
+    }
+  }
+
+  .main-page__title {
+    color: #4caf50;
+    font-weight: 400;
+    margin: 10px 0;
+  }
+
+  .line-div {
+    width: 100%;
+    border: 0.5px solid lightgray;
+    margin: 20px 0;
+  }
+  .list-container {
+    .list__title {
+      font-weight: normal;
+    }
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(160px, 300px));
+      justify-content: space-between;
+      p {
+        font-size: 18px;
+        svg {
+          width: 25px;
+        }
+      }
+    }
+  }
+
+  .info {
+    .info__title {
+      font-weight: normal;
+    }
+    .info__text {
+      line-height: 1.5;
+    }
+  }
+
+  .rules {
+    .rules__title {
+      font-weight: normal;
+    }
+    .rules__text {
+      line-height: 1.5;
+    }
+  }
+
+  .contact {
+    .contact__title {
+      font-size: 30px;
+      font-weight: normal;
+    }
+    .contact__list {
+      list-style: none;
+      padding: 0;
+      li {
+        margin: 5px 0;
+        svg {
+          width: 20px;
+          margin-right: 13px;
+          font-size: 13px;
+        }
+      }
+    }
+    form {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: 14px;
+      input {
+        border: 1px solid #ccc;
+        padding: 8px;
+        height: 40px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 1050px) {
+    max-width: 100%;
+    nav {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.subscribe-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 900px;
+  height: 250px;
+  padding: 12px 24px;
+  background-color: white;
+  z-index: 5;
+  text-align: center;
+
+  h2 {
+    margin: 0 0 30px 0;
+    letter-spacing: 7px;
+    font-size: 30px;
+    font-weight: normal;
+  }
+  button {
+    width: 130px;
+  }
+  p {
+    margin: 0 0 15px 0;
+  }
+  input {
+    margin: 0 0 15px 0;
+    border: 1px solid #ccc;
+    padding: 8px;
+    height: 40px;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  @media (max-width: 1050px) {
+    width: 600px;
+  }
+}
