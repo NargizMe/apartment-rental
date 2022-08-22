@@ -4,12 +4,12 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/index.html"));
+  res.sendFile(path.join(__dirname + "/public/index.html"));
 });
 
 app.post("/search-apartments", (req, res) => {
@@ -51,4 +51,4 @@ app.post("/subscribe", (req, res) => {
   return res.status(418).json({ errorObject });
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000, () => console.log("Server is running..."));
