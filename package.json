@@ -2,12 +2,11 @@
   "name": "apartment-rental",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
-  "keywords": [],
   "author": "Nargis Rafiyeva",
   "license": "ISC",
   "dependencies": {
@@ -16,5 +15,11 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "keywords": [
+    "heroku"
+  ]
 }
