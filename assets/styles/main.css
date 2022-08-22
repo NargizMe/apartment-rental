@@ -24,6 +24,10 @@ body {
   .close-button svg {
     font-size: 20px; }
 
+.validation-label {
+  color: red;
+  font-size: 13px; }
+
 .container {
   display: flex;
   justify-content: center; }

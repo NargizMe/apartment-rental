@@ -34,8 +34,10 @@
               type="text"
               id="checkIn"
               name="checkIn"
-              placeholder="DD MM YY"
+              placeholder="DD.MM.YY"
+              onfocus="(this.type='date')"
             />
+            <label class="checkIn-label validation-label"></label>
             <label for="checkOut">
               <i class="fa-regular fa-calendar"></i>
               Check out
@@ -44,8 +46,10 @@
               type="text"
               id="checkOut"
               name="checkOut"
-              placeholder="DD MM YY"
+              placeholder="DD.MM.YY"
+              onfocus="(this.type='date')"
             />
+            <label class="checkOut-label validation-label"></label>
             <label for="adult">
               <i class="fa-solid fa-person"></i>
               Adults
@@ -56,7 +60,11 @@
               Kids
             </label>
             <input type="number" id="kid" name="kid" min="0" value="0" />
-            <button class="main-button">
+            <button
+              class="main-button sideBar-button"
+              type="button"
+              onclick="sideBarForm()"
+            >
               <i class="fa-solid fa-magnifying-glass"></i>
               Search availability
             </button>
@@ -233,10 +241,18 @@
           </ul>
           <p class="contact__subtitle">Questions? Go ahead, ask them:</p>
           <form>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="text" placeholder="Message" />
-            <button class="main-button">Send a Message</button>
+            <input type="text" placeholder="Name" id="contact-name" />
+            <input type="email" placeholder="Email" id="contact-email" />
+            <label class="contact-email-label validation-label"></label>
+            <input type="text" placeholder="Message" id="contact-message" />
+            <label class="contact-message-label validation-label"></label>
+            <button
+              type="button"
+              class="main-button contact-button"
+              onclick="contactForm()"
+            >
+              Send a Message
+            </button>
           </form>
         </div>
         <!--      <p>Powered by Me Me</p>-->
@@ -252,10 +268,9 @@
         Join our mailing list to receive updates on available dates and special
         offers.
       </p>
-      <input type="email" placeholder="Enter e-mail" />
-      <button class="main-button" onclick="toggleSubscribe(false)">
-        Subscribe
-      </button>
+      <input type="email" id="subscribe-email" placeholder="Enter e-mail" />
+      <label class="subscribe-label validation-label"></label>
+      <button class="main-button" onclick="subscribeToSite()">Subscribe</button>
     </div>
 
     <script src="./assets/scripts/app.js"></script>
